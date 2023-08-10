@@ -1,0 +1,17 @@
+{% extends "notes/layout.html" %}
+{% block content %}
+
+<h1 style="padding-left: 25px;">{{object.title}}</h1>
+<main>
+    <div class="wrapper">
+        <div class="notes-card">
+            <h4><a href="{% url 'note_detail' note.id %}">{{object.title}}</a></h4>
+            <p>{{object.content}}</p>
+            <p>{{object.created_at}}</p>
+            <button type="button"><a href="{% url 'note_delete' object.pk %}">Delete</a></button>
+            <button type="button"><a href="{% url 'note_update' object.pk %}">Update</a></button>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}

@@ -1,0 +1,9 @@
+{% extends "notes/layout.html" %}
+{% block content %}
+<h1 style="padding-left: 25px;">Create notes here</h1>
+<form action="" method="post">
+  {% csrf_token %}
+  <table style="padding-left: 25px;">{{ form.as_table }}</table>
+  <input style="margin-left: 6pc;" type="submit" value="Submit">
+</form>
+{% endblock content %}

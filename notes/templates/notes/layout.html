@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django - Notes</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'notes/global.css' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png' %}">
+</head>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <a class="nav-link active" href="{% url 'home' %}">Home</a>
+            <a class="nav-link" href="{% url 'notes' %}">Notes</a>
+            <a class="nav-link" href="{% url 'create' %}">Create</a>
+            <a class="app-label" href="{% url 'notes' %}">NOTES VIEWER</a>
+        </nav>
+    </div>
+    {% block content %} {% endblock %}
+
+</body>
+
+</html>
